@@ -34,13 +34,12 @@ import image32 from '../../../../assets/Latestimage/image32.png'
 import image33 from '../../../../assets/Latestimage/image33.png'
 import image34 from '../../../../assets/Latestimage/image34.png'
 
-
-const Lateatr = () => {
+const Hotstarspecial = () => {
     const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image18, image19, image20, image21, image22, image23, image24, image25, image26, image27, image28, image29, image30, image31, image32, image33, image34];
     return (
         <div className=" mx-5 md:mx-20">
             <div className="flex justify-between mt-14">
-                <p className="font-bold text-zinc-300 text-sm sm:text-base md:text-2xl">Latest Releases</p>
+                <p className="font-bold text-zinc-300 text-sm sm:text-base md:text-2xl ">Hotstar Special</p>
                 <button className=" text-slate-500 hover:text-slate-300">View All&gt;&gt;</button>
             </div>
             <div className="flex items-center gap-2 md:gap-5 my-3 overflow-x-auto no-scrollbar overflow-y-hidden">
@@ -54,9 +53,8 @@ const Lateatr = () => {
                     </div>
                 ))}
             </div>
-
         </div>
     )
 }
 
-export default Lateatr
+export default Hotstarspecial
