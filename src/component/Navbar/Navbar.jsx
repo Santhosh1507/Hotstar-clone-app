@@ -16,8 +16,7 @@ const Navbar = () => {
     }
 
     const menuitemClick = () => {
-        setOpen(0)
-
+       setOpen(0)
     }
     return (
         <div className="shadow-slate-800 fixed w-full z-10 top-0 bg-white dark:bg-stone-950">
@@ -30,8 +29,8 @@ const Navbar = () => {
                         <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" /></svg>
                     </button>
                 </div>
-                <div className={`w-full md:block md:w-auto md:order-1 text-center ${open ? "block" : "hidden"}`}>
-                    <ul className="flex md:flex-row md:gap-10 flex-col">
+                <div className={` w-full md:block md:w-auto md:order-1 md:text-center ${open ? "block" : "hidden"}`}>
+                    <ul className="flex md:flex-row md:gap-10 flex-wrap gap-10 sm:gap-8 md:mt-0 mt-10">
                         <li onClick={menuitemClick} className="flex items-center gap-2 hover:bg-blue-700 md:px-4 rounded hover:scale-110 duration-200">
                             <Link to='/' className="flex items-center gap-1" > <AiFillHome className=" text-white " />
                                 <a href="#" className="block py-2  text-white " aria-current="page">Home</a>
