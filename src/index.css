@@ -12,3 +12,38 @@
       scrollbar-width: none; /* Firefox */
     }
 }
+
+@layer components {
+    
+  .divelement1{
+    @apply mx-5 md:mx-20;
+  }
+  
+  .divelement2{
+    @apply flex justify-between mt-14;
+  }
+  .divelement3{
+    @apply flex items-center gap-2 md:gap-5 my-3 overflow-x-auto no-scrollbar overflow-y-hidden ;
+  }
+
+  .divelement4{
+    @apply w-20 md:w-40 flex-shrink-0  ;
+  }
+
+  .divelement4:hover{
+    @apply scale-125 duration-200;
+  }
+
+  .imgelement{
+    @apply w-20 md:w-40 rounded;
+  }
+  .pelement{
+    @apply font-bold text-zinc-300 text-sm sm:text-base md:text-2xl;
+  }
+  .btnelement{
+    @apply text-slate-500;
+  }
+  .btnelement:hover{
+    @apply text-slate-300;
+  }
+}

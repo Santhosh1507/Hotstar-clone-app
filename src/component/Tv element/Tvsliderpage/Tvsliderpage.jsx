@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import image1 from '../../../assets/slider image/image1.png'
-import image2 from '../../../assets/slider image/image2.png'
-import image3 from '../../../assets/slider image/image3.png'
-// import image4 from '../../../assets/slider image/image4.png'
-// import image5 from '../../../assets/slider image/image5.png'
-// import image6 from '../../../assets/slider image/image6.png'
-// import image7 from '../../../assets/slider image/image7.png'
-// import image8 from '../../../assets/slider image/image8.png'
+import image1 from '../../../../assets/slider image/image1.png'
+import image2 from '../../../../assets/slider image/image2.png'
+import image3 from '../../../../assets/slider image/image3.png'
 
-
-const Slider = () => {
+const Tvsliderpage = () => {
     const images = [image1, image2, image3]; // Add more images to this array as needed
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -65,4 +59,4 @@ const Slider = () => {
     )
 }
 
-export default Slider
+export default Tvsliderpage
