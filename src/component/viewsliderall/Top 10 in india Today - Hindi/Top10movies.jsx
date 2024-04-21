@@ -9,6 +9,7 @@ import image7 from '../../../../assets/Top10movies/image7.png'
 import image8 from '../../../../assets/Top10movies/image8.png'
 import image9 from '../../../../assets/Top10movies/image9.png'
 import image10 from '../../../../assets/Top10movies/image10.png'
+import { Link } from 'react-router-dom'
 
 const Top10movies = () => {
     const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10];
@@ -16,7 +17,7 @@ const Top10movies = () => {
         <div className=" mx-5 md:mx-20 mt-10">
             <div className="flex justify-between mt-14">
                 <p className="font-bold text-zinc-300 text-sm sm:text-base md:text-2xl">Top 10 in India Today - Hindi</p>
-                <button className=" text-slate-500 hover:text-slate-300">View All&gt;&gt;</button>
+                <Link to='/home/top10movies' className=" text-slate-500 hover:text-slate-300">View All&gt;&gt;</Link>
             </div>
             <div className="flex items-center gap-2 md:gap-5 my-3 overflow-x-auto no-scrollbar overflow-y-hidden">
                 {images.map((image, index) => (

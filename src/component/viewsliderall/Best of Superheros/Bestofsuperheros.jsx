@@ -33,6 +33,7 @@ import image31 from '../../../../assets/Latestimage/image31.png'
 import image32 from '../../../../assets/Latestimage/image32.png'
 import image33 from '../../../../assets/Latestimage/image33.png'
 import image34 from '../../../../assets/Latestimage/image34.png'
+import { Link } from 'react-router-dom'
 
 
 const Bestofsuperheros = () => {
@@ -41,7 +42,7 @@ const Bestofsuperheros = () => {
         <div className=" mx-5 md:mx-20">
             <div className="flex justify-between mt-14">
                 <p className="font-bold text-zinc-300 text-sm sm:text-base md:text-2xl ">Best of Superheros</p>
-                <button className=" text-slate-500 hover:text-slate-300">View All&gt;&gt;</button>
+                <Link to='/home/bestofsuperheros' className=" text-slate-500 hover:text-slate-300">View All&gt;&gt;</Link>
             </div>
             <div className="flex items-center gap-2 md:gap-5 my-3 overflow-x-auto no-scrollbar overflow-y-hidden">
                 {images.map((image, index) => (
