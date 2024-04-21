@@ -16,7 +16,7 @@ const Loginpage = () => {
         if (account && account.password === password) {
             localStorage.setItem("authenticated", true);
             setAuthenticated(true);
-            navigate("/allpage");
+            navigate("/home");
         } else {
             alert('Invalid username or password');
         }
@@ -24,10 +24,10 @@ const Loginpage = () => {
     return (
         <div className="bg-slate-800 h-screen">
             <Loginnavbar />
-            <div className=" mt-32 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+            <div className=" mt-20 flex items-center justify-center px-4 sm:px-6 lg:px-8">
                 <div className="max-w-md w-full ">
                     <div>
-                        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-200">Sign in to your account</h2>
+                        <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-200">Sign in to your hotstar account</h2>
                     </div>
                     <form className="mt-8 space-y-6 " onSubmit={handleSubmit}>
                         <input type="hidden" name="remember" value="true" />

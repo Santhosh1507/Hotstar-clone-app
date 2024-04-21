@@ -7,7 +7,7 @@ import { MdOutlineMovie } from "react-icons/md";
 import { MdOutlineSportsBaseball } from "react-icons/md";
 import { PiChalkboardSimpleFill } from "react-icons/pi";
 import { CiGrid42 } from "react-icons/ci";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     const [open, setOpen] = useState(0);
@@ -18,6 +18,11 @@ const Navbar = () => {
     const menuitemClick = () => {
        setOpen(0)
     }
+    const navigate = useNavigate();
+    const handleLogout = () => {
+        localStorage.clear();
+        navigate("/");
+      };
     return (
         <div className="shadow-slate-800 fixed w-full z-10 top-0 bg-white dark:bg-stone-950">
             <nav className="flex items-center justify-between flex-wrap  p-3 mx-5 lg:mx-10 ">
@@ -32,39 +37,39 @@ const Navbar = () => {
                 <div className={` w-full md:block md:w-auto md:order-1 md:text-center ${open ? "block" : "hidden"}`}>
                     <ul className="flex md:flex-row md:gap-10 flex-wrap gap-10 sm:gap-8 md:mt-0 mt-10">
                         <li onClick={menuitemClick} className="flex items-center gap-2 hover:bg-blue-700 md:px-4 rounded hover:scale-110 duration-200">
-                            <Link to='/' className="flex items-center gap-1" > <AiFillHome className=" text-white " />
+                            <Link to='/home' className="flex items-center gap-1" > <AiFillHome className=" text-white " />
                                 <a href="#" className="block py-2  text-white " aria-current="page">Home</a>
                             </Link>
                         </li>
                         <li onClick={menuitemClick} className="flex items-center gap-2 hover:bg-blue-700 md:px-4 rounded hover:scale-110 duration-200">
-                            <Link to='/search' className="flex items-center gap-1" > <HiSearch className=" text-white " />
+                            <Link to='/home/search' className="flex items-center gap-1" > <HiSearch className=" text-white " />
                                 <a href="#" className="block py-2  text-white rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white " aria-current="page">Search</a>
                             </Link>
                         </li>
                         <li onClick={menuitemClick} className="flex items-center gap-2 hover:bg-blue-700 md:px-4 rounded hover:scale-110 duration-200">
-                            <Link to='/tvmovies' className="flex items-center gap-1" ><PiChalkboardSimpleFill className=" text-white" />
+                            <Link to='/home/tvmovies' className="flex items-center gap-1" ><PiChalkboardSimpleFill className=" text-white" />
                                 <a href="#" className="block py-2  text-white  rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white " aria-current="page">Tv</a>
                             </Link>
                         </li>
                         <li onClick={menuitemClick} className="flex items-center gap-2 hover:bg-blue-700 md:px-4 rounded hover:scale-110 duration-200">
-                            <Link to='/movies' className="flex items-center gap-1" > <MdOutlineMovie className=" text-white" />
+                            <Link to='/home/movies' className="flex items-center gap-1" > <MdOutlineMovie className=" text-white" />
                                 <a href="#" className="block py-2  text-white  rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Movies</a>
                             </Link>
                         </li>
                         <li onClick={menuitemClick} className="flex items-center gap-2 hover:bg-blue-700 md:px-4 rounded hover:scale-110 duration-200">
-                            <Link to='/sports' className="flex items-center gap-1" > <MdOutlineSportsBaseball className=" text-white" />
+                            <Link to='/home/sports' className="flex items-center gap-1" > <MdOutlineSportsBaseball className=" text-white" />
                                 <a href="#" className="block py-2  text-white  rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Sports</a>
                             </Link>
                         </li>
                         <li onClick={menuitemClick} className="flex items-center gap-2 hover:bg-blue-700 md:px-4 rounded hover:scale-110 duration-200">
-                            <Link to='/categories' className="flex items-center gap-1" > <CiGrid42 className=" text-white" />
+                            <Link to='/home/categories' className="flex items-center gap-1" > <CiGrid42 className=" text-white" />
                                 <a href="#" className="block py-2  text-white  rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Categories</a>
                             </Link>
                         </li>
                         <li onClick={menuitemClick} className="flex items-center gap-2 hover:bg-blue-700 md:px-4 rounded hover:scale-110 duration-200">
-                            <Link  className="flex items-center gap-1" > <CgProfile className=" text-white" />
+                            <button onClick={handleLogout}  className="flex items-center gap-1" > <CgProfile className=" text-white" />
                                 <a href="#" className="block py-2  text-white  rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white " aria-current="page">Logout</a>
-                            </Link>
+                            </button>
                         </li>
                     </ul>
                 </div>
